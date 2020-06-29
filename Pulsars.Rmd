@@ -1,0 +1,82 @@
+---
+title: "Phishing_project"
+output: pdf_document
+---
+
+# Setup data
+
+```{r load-packages, include=FALSE}
+
+library(tidyr)
+library(dslabs)
+library(HistData)
+library(Lahman)
+library(dplyr)
+library(rvest)
+library(broom)
+library(caret)
+library(lubridate)
+library(ggplot2)
+library(matrixStats)
+library(purrr)
+library(genefilter)
+library(rpart)
+library(quantreg)
+library(randomForest)
+library(naivebayes)
+library(rafalib)
+library(stringr)
+library(recommenderlab)
+```
+
+```{r setup, include=FALSE}
+###########################
+# Create dataset
+###########################
+
+if(!require(tidyverse)) install.packages("tidyverse", repos = "http://cran.us.r-project.org")
+if(!require(caret)) install.packages("caret", repos = "http://cran.us.r-project.org")
+if(!require(data.table)) install.packages("data.table", repos = "http://cran.us.r-project.org")
+
+dl <- tempfile()
+download.file(https://www.kaggle.com/pavanraj159/predicting-a-pulsar-star/download, dl)
+
+
+
+
+```
+
+# Predicting a pulsar star
+
+Pulsars are a form of Neutron star which is created when a massive star runs out of fuel and collapses in on itself, crushing the protons and electrons into a neutron. Pulsars are rotating Neutron stars and are abserved from earth as pulses of radiation lasting from milliseconds to seconds. Pulsars funnel jets of particles, often observed as light, our of their magnetic poles like a lighthouse we only observe the pulses when they face us. 
+
+Each pulsar produces a different emissions pattern and a detection is averaged over many rotations. Scientists can use Pulsar stars to search for gravitational waves, study extreme states of matter, search for planets outside of our solar system and measure cosmic distances. However, in practice almost all detections are caused by radio frequency interference (RFI) meaning it's difficult to differentiate legitimate candidates from false RFI. 
+
+For this project I will be looking at several machine learning algorythms and eveluating their potential for identifying legitimate Pulsars using the HTRU2 dataset. Success will be xxxxx accuracy and low false positives######
+
+This is a dataset containing 16,259 false identifications (RFI noise) and 1,639 real pulsars all checked by human annotators. The data was collected by the High Time Resolution Survey. 
+
+Source: https://archive.ics.uci.edu/ml/datasets/HTRU2
+
+Dr Robert Lyon
+University of Manchester
+School of Physics and Astronomy
+Alan Turing Building
+Manchester M13 9PL
+United Kingdom
+robert.lyon '@' manchester.ac.uk
+
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
